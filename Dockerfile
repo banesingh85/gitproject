@@ -3,6 +3,15 @@
 # -----------------------------
 FROM node:18-alpine
 
+RUN apk add --no-cache \
+    libc6-compat \
+    vips-dev \
+    libjpeg-turbo-dev \
+    libpng-dev \
+    libwebp-dev \
+    build-base \
+    python3
+
 # -----------------------------
 # 2. Set working directory
 # -----------------------------
