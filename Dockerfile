@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY package*.json ./
 
-# Install ALL dependencies (safe)
 RUN npm install
 
 COPY . .
