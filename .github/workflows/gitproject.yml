@@ -42,8 +42,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name "banesingh85"
+          git config user.email "banesingh.85@gmail.com"
           git add manifest/deployment.yaml
           git commit -m "Update image tag to ${{ github.sha }}"
           git push
