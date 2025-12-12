@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: gitproject
-          image: banesingh85/gitproject:d76e9e8693e8fb38a06e5e4206a26369e6ae2113
+          image: banesingh85/gitproject:f99936f4d4a20a0b3082b8a31d821c85c794fd15
           ports:
             - containerPort: 3000    # change based on your app port
 ---
