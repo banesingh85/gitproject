@@ -27,8 +27,10 @@ jobs:
     needs: build
 
     steps:
-      - name: Checkout GitOps Repo
+      - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUBTOKEN }}
 
       - name: Checking repo files
         run: |
