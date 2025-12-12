@@ -35,16 +35,15 @@ jobs:
           pwd
           ls -R
 
-
-      - name: Update Deployment image tag
+      - name: Update image tag in manifest/deployment.yaml
         run: |
-          echo "Updating image tag in manifest..."
-          sed -i "s|image: banesingh85/gitproject:.*|image: banesingh85/gitproject:${{ github.sha }}|g" deployment.yaml
+          echo "Updating image tag inside manifest/deployment.yaml"
+          sed -i "s|image: banesingh85/gitproject:.*|image: banesingh85/gitproject:${{ github.sha }}|g" manifest/deployment.yaml
 
-      - name: Commit changes for GitOps
+      - name: Commit changes
         run: |
-          git config user.name "banesingh85"
-          git config user.email "banesingh.85@gmail.com"
-          git add deployment.yaml
-          git commit -m "Update image to SHa ${{ github.sha }}"
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add manifest/deployment.yaml
+          git commit -m "Update image tag to ${{ github.sha }}"
           git push
