@@ -47,5 +47,5 @@ jobs:
           git config user.name "banesingh85"
           git config user.email "banesingh.85@gmail.com"
           git add manifest/deployment.yaml
-          git commit -m "Update image tag to ${{ github.sha }}"
+          git commit -m "Update image tag to ${{ github.sha }} [skip ci]"
           git push
